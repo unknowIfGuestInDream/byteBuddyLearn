@@ -36,7 +36,7 @@
     <version>1.0.0</version>
     <packaging>pom</packaging>
     <name>byteBuddyLearn</name>
-    <url>https://javafxtool.tlcsdm.com</url>
+    <url>https://github.com/unknowIfGuestInDream/byteBuddyLearn</url>
     <inceptionYear>2025</inceptionYear>
     <description>byte-buddy learn</description>
 
@@ -56,9 +56,9 @@
         <logback-classic.version>1.5.15</logback-classic.version>
     </properties>
 
-        <modules>
-            <module>webdemo</module>
-        </modules>
+    <modules>
+        <module>webdemo</module>
+    </modules>
 
     <dependencies>
         <dependency>
@@ -145,10 +145,10 @@
         </pluginManagement>
     </build>
 
-    <!--    <issueManagement>-->
-    <!--        <system>Github Issues</system>-->
-    <!--        <url>https://github.com/unknowIfGuestInDream/javafxTool/issues</url>-->
-    <!--    </issueManagement>-->
+    <issueManagement>
+        <system>Github Issues</system>
+        <url>https://github.com/unknowIfGuestInDream/byteBuddyLearn/issues</url>
+    </issueManagement>
     <licenses>
         <license>
             <name>MIT License</name>
@@ -156,11 +156,11 @@
             <distribution>repo</distribution>
         </license>
     </licenses>
-    <!--    <scm>-->
-    <!--        <connection>scm:git:git://github.com/unknowIfGuestInDream/javafxTool.git</connection>-->
-    <!--        <developerConnection>scm:git:git://github.com/unknowIfGuestInDream/javafxTool.git</developerConnection>-->
-    <!--        <url>https://github.com/unknowIfGuestInDream/javafxTool</url>-->
-    <!--    </scm>-->
+    <scm>
+        <connection>scm:git:git://github.com/unknowIfGuestInDream/byteBuddyLearn.git</connection>
+        <developerConnection>scm:git:git://github.com/unknowIfGuestInDream/byteBuddyLearn.git</developerConnection>
+        <url>https://github.com/unknowIfGuestInDream/byteBuddyLearn</url>
+    </scm>
     <organization>
         <name>Tlcsdm</name>
         <url>https://github.com/tlcsdm</url>
