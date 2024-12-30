@@ -52,7 +52,7 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package com.tlcsdm.byteBuddyLearn.study;
+package com.tlcsdm.byteBuddyLearn.study.advice;
 
 public class Foo {
     public static final String myField = "Hello";

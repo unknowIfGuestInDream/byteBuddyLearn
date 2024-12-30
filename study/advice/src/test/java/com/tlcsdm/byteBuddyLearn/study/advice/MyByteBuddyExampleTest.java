@@ -25,7 +25,7 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package com.tlcsdm.byteBuddyLearn.study;
+package com.tlcsdm.byteBuddyLearn.study.advice;
 
 import net.bytebuddy.ByteBuddy;
 import net.bytebuddy.dynamic.loading.ClassLoadingStrategy;
@@ -48,7 +48,7 @@ public class MyByteBuddyExampleTest {
     void fixedValue() throws InstantiationException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         Class<?> dynamicType = new ByteBuddy()
                 .subclass(Object.class)
-                .name("com.tlcsdm.bytebuddyexample.NewClass")
+                .name("com.tlcsdm.byteBuddyLearn.study.advice.NewClass")
                 .method(ElementMatchers.named("toString"))
                 .intercept(FixedValue.value("Hello Fixed Value!"))
                 .make()
@@ -78,7 +78,7 @@ public class MyByteBuddyExampleTest {
     void newMethod() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         Class<?> dynamicType = new ByteBuddy()
                 .subclass(Object.class)
-                .name("com.tlcsdm.bytebuddyexample.NewClassWithNewMethod")
+                .name("com.tlcsdm.byteBuddyLearn.study.advice.NewClassWithNewMethod")
                 .defineMethod("invokeMyMethod", String.class, Modifier.PUBLIC)
                 .intercept(FixedValue.value("Hello from new method!"))
                 .make()
@@ -97,7 +97,7 @@ public class MyByteBuddyExampleTest {
     void overrideFieldValue() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException {
         Class<? extends Foo> dynamicType = new ByteBuddy()
                 .redefine(Foo.class)
-                .name("com.tlcsdm.bytebuddyexample.NewFooClass")
+                .name("com.tlcsdm.byteBuddyLearn.study.advice.NewFooClass")
                 .field(ElementMatchers.named("myField"))
                 .value("World")
                 .make()
@@ -114,7 +114,7 @@ public class MyByteBuddyExampleTest {
     void newField() throws NoSuchFieldException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         Class<?> dynamicType = new ByteBuddy()
                 .subclass(Object.class)
-                .name("com.tlcsdm.bytebuddyexample.NewClassWithNewField")
+                .name("com.tlcsdm.byteBuddyLearn.study.advice.NewClassWithNewField")
                 .defineField("newField", String.class, Modifier.PUBLIC | Modifier.FINAL | Modifier.STATIC)
                 .value("Hello From New Field!")
                 .make()
@@ -130,7 +130,7 @@ public class MyByteBuddyExampleTest {
     void newNonStaticField() throws NoSuchFieldException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         Class<?> dynamicType = new ByteBuddy()
                 .subclass(Object.class)
-                .name("com.tlcsdm.bytebuddyexample.NewClassWithNewMethod")
+                .name("com.tlcsdm.byteBuddyLearn.study.advice.NewClassWithNewMethod")
                 .defineConstructor(Modifier.PUBLIC)
                 .withParameters(String.class)
                 .intercept(MethodCall

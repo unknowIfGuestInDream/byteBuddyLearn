@@ -37,7 +37,6 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <groupId>com.tlcsdm.byteBuddyLearn.agents</groupId>
     <artifactId>agents</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>

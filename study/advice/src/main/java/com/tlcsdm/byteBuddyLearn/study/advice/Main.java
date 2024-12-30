@@ -25,7 +25,7 @@
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-package com.tlcsdm.byteBuddyLearn.study;
+package com.tlcsdm.byteBuddyLearn.study.advice;
 
 public class Main {
     public static void main(String[] args) {
