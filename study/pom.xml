@@ -34,9 +34,11 @@
         <groupId>com.tlcsdm.byteBuddyLearn</groupId>
         <artifactId>byteBuddyLearn</artifactId>
         <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>study</artifactId>
+    <version>1.0.0</version>
 
     <build>
         <plugins>
