@@ -47,6 +47,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+<!--                <configuration>-->
+<!--                    <agents>../agents/opentelemetry-javaagent-all.jar</agents>-->
+<!--                </configuration>-->
             </plugin>
         </plugins>
     </build>
