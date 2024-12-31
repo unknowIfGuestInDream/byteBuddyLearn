@@ -32,17 +32,13 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.tlcsdm.byteBuddyLearn</groupId>
-        <artifactId>byteBuddyLearn</artifactId>
+        <artifactId>study</artifactId>
         <version>1.0.0</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>study</artifactId>
+    <groupId>com.tlcsdm.byteBuddyLearn.study</groupId>
+    <artifactId>simpleAOP</artifactId>
     <version>1.0.0</version>
-    <packaging>pom</packaging>
-    <modules>
-        <module>advice</module>
-        <module>simpleAOP</module>
-    </modules>
+    <name>simpleAOP</name>
 
 </project>
