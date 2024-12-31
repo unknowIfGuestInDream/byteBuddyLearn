@@ -48,3 +48,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+### Application ###
+logs
+runtime

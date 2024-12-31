@@ -32,19 +32,50 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.tlcsdm.byteBuddyLearn</groupId>
-        <artifactId>byteBuddyLearn</artifactId>
+        <artifactId>agents</artifactId>
         <version>1.0.0</version>
-        <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>agents</artifactId>
+    <groupId>com.tlcsdm.byteBuddyLearn.agents</groupId>
+    <artifactId>agentlistener</artifactId>
     <version>1.0.0</version>
-    <packaging>pom</packaging>
-    <name>byteBuddyLearn-agents</name>
 
-    <modules>
-        <module>adviceagent</module>
-        <module>agentlistener</module>
-    </modules>
-
+    <build>
+        <finalName>springBootAgentListener</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                        </manifest>
+                        <manifestEntries>
+                            <Premain-Class>com.tlcsdm.byteBuddyLearn.agents.agentlistener.Agent</Premain-Class>
+                            <Agent-Class>com.tlcsdm.byteBuddyLearn.agents.agentlistener.Agent</Agent-Class>
+                            <Can-Redefine-Classes>true</Can-Redefine-Classes>
+                            <Can-Retransform-Classes>true</Can-Retransform-Classes>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>assemble-all</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
