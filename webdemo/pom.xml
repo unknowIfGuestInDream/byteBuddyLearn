@@ -14,7 +14,7 @@
     <description>webdemo</description>
 
     <properties>
-        <springboot.version>3.4.5</springboot.version>
+        <springboot.version>3.4.6</springboot.version>
     </properties>
     <dependencies>
         <dependency>
